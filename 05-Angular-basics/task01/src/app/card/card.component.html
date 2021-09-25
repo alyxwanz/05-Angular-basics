@@ -1,0 +1,19 @@
+<div *ngIf="book" class="book-card">
+    <h3 class="book-title">
+        {{ book.title }}
+    </h3>
+    <h4 class="book-subtitle">
+        {{ book.subtitle }}
+    </h4>
+    <img class="book-smallThumbnail" src="{{book.thumbnail}}" alt="smallThumbnail">
+    <p class="book-description">
+        {{ book.description }}
+    </p>
+    <span class="book-publishedDate">
+        {{ book.publishedDate }}
+    </span>
+    <span class="book-authors">
+        {{ book.authors }}
+    </span>
+    <button class="book-button" (click)="handleClick()">{{btnTitle}}</button>
+</div>

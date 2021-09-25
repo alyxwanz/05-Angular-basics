@@ -1,0 +1,29 @@
+<div class="main">
+    <div class="search-input">
+        <input [(ngModel)]="inputValue" type="text">
+        <button (click)="search()">Search</button>
+    </div>
+    <div class="search-result">
+        <h1>Search result</h1>
+        <div [ngClass]="{'border' : books.length}">
+            <ng-container *ngFor="let book of books">
+                <app-card [book]="book" (newItemEvent)="handler($event)"></app-card>
+            </ng-container>
+        </div>
+
+    </div>
+    <div class="my-list">
+        <h1>My list</h1>
+        <div [ngClass]="{'border' : newArr.length}">
+            <ng-container *ngFor="let book of newArr">
+                <app-card
+                [book]="book"
+                [btnTitle]="'Remove'"
+                (newItemEvent)="handler($event)"
+                (removeEvent)="removeHandler($event)"
+                ></app-card>
+            </ng-container>
+        </div>
+        
+    </div>
+</div>

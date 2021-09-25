@@ -1,0 +1,28 @@
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content auto;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 50px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "search-input search-input"
+        "search-result my-list";
+}
+
+.search-input {
+    grid-area: search-input;
+}
+
+.search-result {
+    grid-area: search-result;
+}
+
+.my-list {
+    grid-area: my-list;
+}
+
+.border {
+    border: 1px solid black;
+}
